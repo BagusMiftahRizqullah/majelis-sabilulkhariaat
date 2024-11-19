@@ -1,10 +1,11 @@
-'use client'
+
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 
 const ThemeChanger = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  console.log("theme=>>>>",theme);
 
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), []);

@@ -74,7 +74,7 @@ const images: ImageData[] = [
   return (
     <div className="flex flex-col items-center px-16 py-20">
            
-          <h1 className="text-4xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight">
+          <h1 className="dark:text-white text-4xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight">
               Kegiatan Majelis Sabilull Khairaat
           </h1> 
     <div className="relative w-full mx-auto mt-4">

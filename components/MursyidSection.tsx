@@ -22,10 +22,10 @@ function MursyidSection() {
         <div className="flex flex-row justify-center w-6/12 max-md:ml-0 max-md:w-full">
           <div className="flex flex-col self-stretch my-auto text-zinc-900 max-md:mt-10 max-md:max-w-full">
       
-            <div className="mt-4 text-5xl font-bold leading-[58px] max-md:max-w-full max-md:text-4xl max-md:leading-[54px]">
+            <div className=" dark:text-white mt-4 text-5xl font-bold leading-[58px] max-md:max-w-full max-md:text-4xl max-md:leading-[54px]">
               Syeikh Fahmi Attamimi
             </div>
-            <div className="mt-6 text-lg leading-7 max-md:max-w-full">
+            <div className="dark:text-white mt-6 text-lg leading-7 max-md:max-w-full">
               Mursyid Thariqoh Fahamiyyah dan pengurus majeliis taddabur alquran sabilul khairaat denpasar bali indonesia.
             </div>
           </div>

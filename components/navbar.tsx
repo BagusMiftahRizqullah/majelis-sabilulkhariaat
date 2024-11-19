@@ -5,6 +5,8 @@ import { Disclosure } from "@headlessui/react";
 import Logo from "../public/img/logo.png";
 import Image from 'next/image';
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+
 
 export default function Navbar() {
   const navigation = ["Home", "About Us", "Privacy Policy"];
@@ -31,7 +33,7 @@ export default function Navbar() {
   
   return (
    
-      <nav className={`${isScrolled ? 'bg-white shadow-md' : ''} sticky top-0 z-50  flex flex-wrap items-center justify-between py-3 px-8 w-full`}>
+      <nav className={`${isScrolled ? 'bg-white shadow-md dark:bg-black' : ''} sticky top-0 z-50  flex flex-wrap items-center justify-between py-3 px-8 w-full`}>
         {/* Logo  */}
         <Disclosure>
           {({ open }) => (
@@ -50,7 +52,7 @@ export default function Navbar() {
                     layout="fixed"
                   />
                     </span>
-                    <span className="text-2xl font-medium text-black">Majelis Sabilul Khairaat</span>
+                    <span className=" text-black dark:text-white text-2xl font-medium">Majelis Sabilul Khairaat</span>
                   </a>
               
 
@@ -81,7 +83,7 @@ export default function Navbar() {
                   <>
                     {navigation.map((item, index) => (
                     
-                        <a href={`#${item}`} className="w-full px-4 py-2 -ml-4 text-black rounded-md hover:text-green-500 focus:text-green-500 focus:outline-none">
+                        <a href={`#${item}`} className="dark:text-white w-full px-4 py-2 -ml-4 text-black rounded-md hover:text-green-500 focus:text-green-500 focus:outline-none">
                           {item}
                         </a>
                     
@@ -102,7 +104,7 @@ export default function Navbar() {
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
              
-                  <a href={`#${menu}`} className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md hover:text-green-500 focus:text-green-500 focus:bg-green-100 focus:outline-none">
+                  <a href={`#${menu}`} className="dark:text-white inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md hover:text-green-500 focus:text-green-500 focus:bg-green-100 focus:outline-none">
                     {menu}
                   </a>
                 
@@ -114,9 +116,17 @@ export default function Navbar() {
         <div className="hidden mr-3 space-x-3 lg:flex nav__item">
         
           
-         
+            {/* <motion.button  whileTap={{ scale: 0.9 }}>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.aurodtoriqotilfahamiyah&pcampaignid=web_share"
+                target="_blank"
+                rel="noopener"
+                className="px-8 py-4 text-lg font-medium text-center text-white bg-green-600 rounded-md ">
+                Download
+              </a>
+              </motion.button> */}
 
-          {/* <ThemeChanger /> */}
+          <ThemeChanger />
         </div>
       </nav>
   );
