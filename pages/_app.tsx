@@ -10,7 +10,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   const [queryClient] = React.useState(() => new QueryClient());
   return (
     <>
-       <ThemeProvider attribute="class">
+       <ThemeProvider defaultTheme="light" attribute="class">
         <QueryClientProvider client={queryClient}>
           <ReactQueryDevtools />
               <Head>
