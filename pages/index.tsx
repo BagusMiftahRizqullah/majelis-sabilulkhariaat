@@ -5,11 +5,13 @@ import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import SavingsSection from "@/components/MursyidSection";
 import KegiatanSection from "@/components/KegiatanSection";
+import SlideShow from "@/components/SlideShow";
+import YouTubeGallery from "@/components/YouTubeGallery";
+import KitabAurod from "@/components/KitabAurod";
 
 const Index: NextPage = () => {
   return (
     <>
-    
       <Head>
         <link rel="icon" href="../public/img/logo.png" /> {/* Favicon */}
         <link rel="apple-touch-icon" href="../public/img/logo.png" /> {/* Apple devices */}
@@ -24,8 +26,11 @@ const Index: NextPage = () => {
       </Head>
       <Navbar />
       <Hero/>
-     <SavingsSection/>
-     <KegiatanSection/>
+      <div className="bg-green-700 flex flex-col justify-center px-16 py-12 max-md:px-5 max-md:py-10"/>
+      <YouTubeGallery />
+      <div className="bg-green-700 flex flex-col justify-center px-16 py-12 max-md:px-5 max-md:py-10"/>
+      <KitabAurod/>
+      <div className="bg-green-700 flex flex-col justify-center px-16 py-12 max-md:px-5 max-md:py-10"/>
     </>
   );
 };

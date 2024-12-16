@@ -83,7 +83,7 @@ export default function Navbar() {
                   <>
                     {navigation.map((item, index) => (
                     
-                        <a href={`#${item}`} className="dark:text-white w-full px-4 py-2 -ml-4 text-black rounded-md hover:text-green-500 focus:text-green-500 focus:outline-none">
+                        <a key={index} href={`#${item}`} className="dark:text-white w-full px-4 py-2 -ml-4 text-black rounded-md hover:text-green-500 focus:text-green-500 focus:outline-none">
                           {item}
                         </a>
                     
@@ -102,7 +102,7 @@ export default function Navbar() {
         <div className="hidden text-center lg:flex lg:items-center">
           <ul className=" items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
             {navigation.map((menu, index) => (
-              <li className="mr-3 nav__item" key={index}>
+              <li key={index} className="mr-3 nav__item">
              
                   <a href={`#${menu}`} className="dark:text-white inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md hover:text-green-500 focus:text-green-500 focus:bg-green-100 focus:outline-none">
                     {menu}

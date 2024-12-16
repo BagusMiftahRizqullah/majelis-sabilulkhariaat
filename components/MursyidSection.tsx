@@ -6,8 +6,8 @@ function MursyidSection() {
   return (
     <div className="flex flex-col justify-center px-16 py-20 max-md:px-5">
     <div className="mt-8 max-md:mr-1 max-md:max-w-full">
-      <div className="flex">
-        <div className="flex flex-row justify-center w-6/12 max-md:ml-0 max-md:w-full">
+      <div className="flex ">
+        <div className="flex justify-center w-6/12 max-md:ml-0 max-md:w-full">
         <Image
               src={Mursyid}
               width="250"
@@ -26,7 +26,8 @@ function MursyidSection() {
               Syeikh Fahmi Attamimi
             </div>
             <div className="dark:text-white mt-6 text-lg leading-7 max-md:max-w-full">
-              Mursyid Thariqoh Fahamiyyah dan pengurus majeliis taddabur alquran sabilul khairaat denpasar bali indonesia.
+              Mursyid Thariqoh Fahamiyyah dan pengurus majeliis taddabur alquran 
+              sabilul khairaat denpasar bali indonesia.
             </div>
           </div>
         </div>
