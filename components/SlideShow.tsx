@@ -19,113 +19,121 @@ import qurban3 from '../public/img/qurban3.jpeg';
 import qurban4 from '../public/img/qurban4.jpeg';
 import qurban5 from '../public/img/qurban5.jpeg';
 import qurban6 from '../public/img/qurban6.jpeg';
-import qurban7 from '../public/img/qurban7.jpeg';
 
 export default function SlideShow() {
-  const data =[
-      {
-          image: majelis1,
-          title: "Majelis Sabilul Khairaat",
-          description: "Majelis Sabilul Khairaat"
-      },
-      {
-          image: majelis2,
-          title: "Majelis Sabilul Khairaat",
-          description: "Majelis Sabilul Khairaat"
-      },
-      {
-          image: maulid1,
-          title: "Maulid Nabi Muhammad SAW",
-          description: "Maulid Nabi Muhammad SAW"
-      },
-      {
-          image: maulid2,
-          title: "Maulid Nabi Muhammad SAW",
-          description: "Maulid Nabi Muhammad SAW"
-      },
-      {
-          image: maulid3,
-          title: "Maulid Nabi Muhammad SAW",
-          description: "Maulid Nabi Muhammad SAW"
-      },
-      {
-          image: maulid4,
-          title: "Maulid Nabi Muhammad SAW",
-          description: "Maulid Nabi Muhammad SAW"
-      },
-      {
-          image: LP3I1,
-          title: "Laporan Taddabur Al-Quran",
-          description: "Laporan Taddabur Al-Quran"
-      },
-      {
-          image: LP3I2,
-          title: "Laporan Taddabur Al-Quran",
-          description: "Laporan Taddabur Al-Quran"
-      },
-      {
-          image: LP3I3,
-          title: "Laporan Taddabur Al-Quran",
-          description: "Laporan Taddabur Al-Quran"
-      },
-      {
-          image: qurban1,
-          title: "Qurban",
-          description: "Qurban"
-      },
-      {
-          image: qurban2,
-          title: "Qurban",
-          description: "Qurban"
-      },
-      {
-          image: qurban3,
-          title: "Qurban",
-          description: "Qurban"
-      },
-      {
-          image: qurban4,
-          title: "Qurban",
-          description: "Qurban"
-      },
-      {
-          image: qurban5,
-          title: "Qurban",
-          description: "Qurban"
-      },
-      {
-          image: qurban6,
-          title: "Qurban",
-          description: "Qurban"
-      }
-  ]
+  const data = [
+    {
+      image: majelis1,
+      title: 'Majelis Sabilul Khairaat',
+      description: 'Majelis Sabilul Khairaat',
+    },
+    {
+      image: majelis2,
+      title: 'Majelis Sabilul Khairaat',
+      description: 'Majelis Sabilul Khairaat',
+    },
+    {
+      image: maulid1,
+      title: 'Maulid Nabi Muhammad SAW',
+      description: 'Maulid Nabi Muhammad SAW',
+    },
+    {
+      image: maulid2,
+      title: 'Maulid Nabi Muhammad SAW',
+      description: 'Maulid Nabi Muhammad SAW',
+    },
+    {
+      image: maulid3,
+      title: 'Maulid Nabi Muhammad SAW',
+      description: 'Maulid Nabi Muhammad SAW',
+    },
+    {
+      image: maulid4,
+      title: 'Maulid Nabi Muhammad SAW',
+      description: 'Maulid Nabi Muhammad SAW',
+    },
+    {
+      image: LP3I1,
+      title: 'Laporan Taddabur Al-Quran',
+      description: 'Laporan Taddabur Al-Quran',
+    },
+    {
+      image: LP3I2,
+      title: 'Laporan Taddabur Al-Quran',
+      description: 'Laporan Taddabur Al-Quran',
+    },
+    {
+      image: LP3I3,
+      title: 'Laporan Taddabur Al-Quran',
+      description: 'Laporan Taddabur Al-Quran',
+    },
+    {
+      image: qurban1,
+      title: 'Qurban',
+      description: 'Qurban',
+    },
+    {
+      image: qurban2,
+      title: 'Qurban',
+      description: 'Qurban',
+    },
+    {
+      image: qurban3,
+      title: 'Qurban',
+      description: 'Qurban',
+    },
+    {
+      image: qurban4,
+      title: 'Qurban',
+      description: 'Qurban',
+    },
+    {
+      image: qurban5,
+      title: 'Qurban',
+      description: 'Qurban',
+    },
+    {
+      image: qurban6,
+      title: 'Qurban',
+      description: 'Qurban',
+    },
+  ];
+
   return (
-    <div className='flex flex-col justify-center  '>
-      <p className=' self-center font-bold text-2xl mt-8 mb-8'>Kegiatan Majelis Sabilul Khairaat</p>
-        <div className='rounded-lg px-52'>
-          <Swiper
+    <div className="flex flex-col justify-center px-4 md:px-8 lg:px-16">
+      <p className="self-center font-bold text-lg md:text-2xl mt-8 mb-8 text-center">
+        Kegiatan Majelis Sabilul Khairaat
+      </p>
+      <div className="rounded-lg">
+        <Swiper
           modules={[Navigation, Pagination]} // Include Swiper modules
-          spaceBetween={30} // Adjust spacing between slides
+          spaceBetween={20} // Adjust spacing between slides
           slidesPerView={1} // Display one slide at a time
           navigation // Enable navigation buttons
           pagination={{ clickable: true }} // Enable pagination dots
-          // style={{ width: '100%', height: 'auto', alignItems: 'center' }} // Add responsive styles
-          >
-            {
-              data?.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <Image
-                  src={item.image}
-                  // width={800} // Adjust the width based on your layout
-                  // height={400} // Adjust the height based on your layout
-                  alt={item.title}
-                  placeholder="blur" // Enable placeholder for lazy loading
-                  />
-                </SwiperSlide>
-              ))
-            }
-          </Swiper>
-        </div>
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }} // Adjust number of slides based on screen width
+        >
+          {data?.map((item, index) => (
+            <SwiperSlide key={index}>
+              <Image
+                src={item.image}
+                className="rounded-lg object-cover"
+                alt={item.title}
+                placeholder="blur" // Enable placeholder for lazy loading
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Optimize image sizes
+              />
+              <div className="text-center mt-4">
+                <h3 className="font-semibold text-gray-800">{item.title}</h3>
+                {/* <p className="text-gray-600 text-sm">{item.description}</p> */}
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 }
