@@ -25,19 +25,22 @@ const YouTubeGallery = () => {
     <div className="w-[100%] px-6 bg-green-700">
       <h1 className="text-3xl font-bold text-center mb-8 text-white">Taddabur Al-Quran</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {videos?.map((video) => (
-          <div key={video.id.videoId} className="relative w-full pb-[56.25%] rounded-lg overflow-hidden shadow-lg">
+        {videos?.map((video, index) => {
+          console.log("dataaaa",video);
+          return (
+            <div key={index} className="relative w-full pb-[56.25%] rounded-lg overflow-hidden shadow-lg">
             <iframe
               className="absolute top-0 left-0 w-full h-full"
-              src={`https://www.youtube.com/embed/${video.id.videoId}`}
-              title={video.snippet.title}
+              src={`https://www.youtube.com/embed/${video['id']['videoId']}`}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
-            <p className="text-center mt-4 text-gray-800 font-medium">{video.snippet.title}</p>
+            <p className="text-center mt-4 text-gray-800 font-medium">{video['snippet']['title']}</p>
           </div>
-        ))}
+          )
+         
+})}
       </div>
     </div>
   );
