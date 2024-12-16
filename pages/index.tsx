@@ -1,14 +1,9 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import LandingPageTemplate from "../templates/LandingPage/LandingPageTemplate";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
-import SavingsSection from "@/components/MursyidSection";
-import KegiatanSection from "@/components/KegiatanSection";
 import SlideShow from "@/components/SlideShow";
 import YouTubeGallery from "@/components/YouTubeGallery";
-import KitabAurod from "@/components/KitabAurod";
-import DownloadKitabAurod from "@/components/DownloadKitab";
 import MapsLocation from "@/components/MapsLocation";
 
 const Index: NextPage = () => {

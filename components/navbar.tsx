@@ -6,10 +6,21 @@ import Logo from "../public/img/logo.png";
 import Image from 'next/image';
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { title } from "process";
 
 
 export default function Navbar() {
-  const navigation = ["Home", "About Us", "Privacy Policy"];
+  const navigation = [{
+    title:"Home",
+    link:'/'
+
+  },{
+    title: "Kitab Aurod",
+    link:'/KitabAurod'
+  },{
+    title: "Privacy Policy",
+    link:'/PrivacyPolicy'
+  }];
   const [isScrolled, setIsScrolled] = useState(false);
 
    // Efek untuk menambahkan event listener scroll
@@ -83,8 +94,8 @@ export default function Navbar() {
                   <>
                     {navigation.map((item, index) => (
                     
-                        <a key={index} href={`#${item}`} className="dark:text-white w-full px-4 py-2 -ml-4 text-black rounded-md hover:text-green-500 focus:text-green-500 focus:outline-none">
-                          {item}
+                        <a key={index} href={`${item.link}`} className="dark:text-white w-full px-4 py-2 -ml-4 text-black rounded-md hover:text-green-500 focus:text-green-500 focus:outline-none">
+                          {item.title}
                         </a>
                     
                     ))}
@@ -104,8 +115,8 @@ export default function Navbar() {
             {navigation.map((menu, index) => (
               <li key={index} className="mr-3 nav__item">
              
-                  <a href={`#${menu}`} className="dark:text-white inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md hover:text-green-500 focus:text-green-500 focus:bg-green-100 focus:outline-none">
-                    {menu}
+                  <a href={`${menu.link}`} className="dark:text-white inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md hover:text-green-500 focus:text-green-500 focus:bg-green-100 focus:outline-none">
+                    {menu.title}
                   </a>
                 
               </li>

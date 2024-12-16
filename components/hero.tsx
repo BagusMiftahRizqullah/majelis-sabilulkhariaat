@@ -1,9 +1,17 @@
 import Image from "next/image";
 import Container from "./container";
 import heroImg from "../public/img/hero.png";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; 
+
 
 export default function Hero() {
+  const handleDownload = () => {
+    // Create a link element and trigger the download
+    const link = document.createElement("a");
+    link.href = '/pdf/kitabAurod.pdf'; // Path to the PDF in the public folder
+    link.download = "KiabAurod_TariqahFahamiyah.pdf"; // File name for the downloaded PDF
+    link.click();
+  };
   return (
     <>
       <Container className="flex flex-wrap pb-12 pt-12 ">
@@ -27,7 +35,7 @@ export default function Hero() {
             <div className="flex flex-col items-start space-x-3 space-y-3 sm:space-y-0 sm:items-center sm:flex-row">
             <motion.button  whileTap={{ scale: 0.9 }}>
               <a
-                href="https://play.google.com/store/apps/details?id=com.aurodtoriqotilfahamiyah&pcampaignid=web_share"
+                onClick={handleDownload}
                 target="_blank"
                 rel="noopener"
                 className="px-8 py-4 text-lg font-medium text-center text-white bg-green-600 rounded-md ">
